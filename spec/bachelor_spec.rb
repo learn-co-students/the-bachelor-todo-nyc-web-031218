@@ -1,4 +1,4 @@
-describe "bachelor" do 
+describe "bachelor" do
 
   let(:data) { JSON.parse(File.read('spec/fixtures/contestants.json')) }
 
@@ -6,6 +6,7 @@ describe "bachelor" do
     it "returns 'Tessa' when passed the data and 'season 10'" do
       expect(get_first_name_of_season_winner(data, "season 10")).to eq("Tessa")
     end
+
 
     it "returns 'Courtney' when passed the data and 'season 16'" do
       expect(get_first_name_of_season_winner(data, "season 16")).to eq("Courtney")
@@ -15,6 +16,7 @@ describe "bachelor" do
       expect(get_first_name_of_season_winner(data, "season 15")).to eq("Emily")
     end
   end
+
 
   describe "#get_contestant_name" do
     it "returns 'Carly Waddel' when passed data and the string 'Cruise Ship Singer'" do
@@ -30,6 +32,8 @@ describe "bachelor" do
     end
   end
 
+
+
   describe "#count_contestants_by_hometown" do
     it "returns 2 when passed data and the string 'New York, New York'" do
       expect(count_contestants_by_hometown(data, "New York, New York")).to eq(4)
@@ -43,6 +47,8 @@ describe "bachelor" do
       expect(count_contestants_by_hometown(data, "San Diego, California")).to eq(5)
     end
   end
+
+
 
   describe "#get_occupation" do
     it "returns 'Journalist' when passed data and the string 'Cranston, Rhode Island'" do
@@ -58,6 +64,8 @@ describe "bachelor" do
     end
   end
 
+
+
   describe "#get_average_age_for_season" do
     it "returns 26 when passed the data and the string 'season 10'" do
       expect(get_average_age_for_season(data, "season 10")).to eq(26)
@@ -71,4 +79,3 @@ describe "bachelor" do
   end
 
 end
-
